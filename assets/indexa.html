@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>goChat</title>
+<link type="text/css" rel="stylesheet" href="/assets/stylo.css">      
+</head>
+<body class="font--open_sans sticky"> 
+
+<div id="root" class="channel-view container-fluid">
+<div data-reactroot="" class="inner-wrap">
+<div class="row content"><div>
+
+
+
+<a href="/logout">Sign out </a>
+
+
+<form id="logout" role="form">
+<div class="signup-header"><span class="fa fa-chevron-left"></span>
+<span>Logout</span></a></div>
+</form>
+
+<div class="col-sm-12">
+<div class="signup-team__container"><img class="signup-team-logo" src="/assets/files/test.png">
+
+
+<div class="signup__content">
+<h4><span>  teams: </span></h4>
+<div class="signup-team-all">
+<div class="signup-team-dir">
+
+
+<span class="fa fa-angle-right right signup-team-dir__arrow" aria-hidden="true"></span></a></div>
+<div class="signup-team-dir">
+
+<form action="/join_team" method="post">
+  <label for="pet-select">Choose a team:</label>
+
+<select id="pet-select" name="teams">
+    
+    <option value="">--Please choose an option--</option>
+    {{range .Teams}}
+    <option value="{{.Displayname}}">{{.Displayname}}</option>
+   
+    {{end}} 
+</select>
+  <input type="submit">
+</form>
+<br>              
+
+
+
+<span class="fa fa-angle-right right signup-team-dir__arrow" aria-hidden="true"></span>
+</a></div></div></div>
+
+<div class="margin--extra"><a class="signup-team-login" href="/create_team/display_name"><span>Create a new team</span></a><div></div></div>
+
+<div class="margin--extra"><a class="signup-team-login" href="/admin_console"><span>Go to System Console</span></a></div></div></div></div>
+
+<div class="footer-push"></div></div><div class="row footer"><div class="footer-pane col-xs-12"><div class="col-xs-12"><span class="pull-right footer-site-name">mon Mattermi</span></div>
+
+<div class="col-xs-12"><span class="pull-right footer-link copyright">© Sophie Inc.</span>
+
+<a id="help_link" class="pull-right footer-link" target="_blank" rel="noopener noreferrer" href="#"><span>Help</span></a><a id="terms_link" class="pull-right footer-link" target="_blank" rel="noopener noreferrer" href="#"><span>Terms</span></a><a id="privacy_link" class="pull-right footer-link" target="_blank" rel="noopener noreferrer" href="#"><span>Privacy</span></a><a id="about_link" class="pull-right footer-link" target="_blank" rel="noopener noreferrer" href="#"><span>About</span></a></div></div></div></div></div> 
+<script>
+
+</script>  </body>
+
+
+
+
+
+
+
+
+</html>

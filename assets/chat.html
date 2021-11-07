@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chat</title>
+   
+
+<link type="text/css" rel="stylesheet" href="/assets/style.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css" integrity="sha256-Is0XNfNX8KF/70J2nv8Qe6BWyiXrtFxKfJBHoDgNAEM=" crossorigin="anonymous" />
+  </head>
+  <body>
+<div id="login">
+        <div class="login">
+            <center>
+                <h2>Login</h2>
+                <form id="f_name">
+                    <input class="textbox" id="tb_name" type="text" autocomplete="off" autofocus placeholder="username"/>
+                    <br>
+                    <br>
+                    <input class="textbox" id="tb_password" type="password" autocomplete="off" autofocus placeholder="password">
+                    <br>
+                    <br>
+                    <input class="button" id="bt_login" type="submit" value="LOGIN"/>
+                    <div id="acc_create">
+                        <p>
+                            Username does not exist.<br>
+                            Account will be created with entered password.
+                        </p>
+                    </div>
+                </form>
+            </center>
+        </div>
+    </div>
+<div id="top_bar">
+        <p style="margin-right: 10px;">Connected:</p>
+        <p id="lb_connected_counter">0</p>
+        
+    </div>
+<input class="tbi" id="tbi_messages" type="text"/>
+<div id="div_emojis" style="display:none;"></div>
+<div class="sidebar--left" id="sidebar-left">
+    
+<div class="team__header theme"><a href="#">
+    <div class="header__info">
+        <div id="cetuser" class="user__name"></div>
+        <div id="celuila" class="team__name" aria-describedby="team-name__tooltip"></div>
+    </div></a>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown-open"><a href="#modal2" id="paloi" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<span class="dropdown__icon"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="46px" viewBox="0 0 8 62" enable-background="new 0 0 8 62" xml:space="preserve"> <g> 
+             <circle cx="6" cy="10.062" r="8"></circle>
+             <circle  cx="6" cy="32" r="8"></circle>
+              <circle  cx="6" cy="54" r="8"></circle> </g> </svg></span></a>
+             <ul id="palou" class="dropdown-menu ps-container ps-theme-default" role="menu" data-ps-id="c3d13ade-8caa-4374-9848-6abfa72bef4d">
+                <li><a href="#"><span>Account Settings</span></a></li>
+                <li><a href="#"><span>Invite New Member</span></a></li>
+                <li><a href="#"><span>Team Invite Link</span></a></li>
+                <li><a href="/serveur/integrations"><span>Integrations</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#" data-toggle="modali" data-target="#team_settings"><span>Team Settings</span></a></li>
+                <li><a href="/create_team"><span>Create a New Team</span></a></li>
+                <li><a href="#"><span>Leave Team</span></a></li>
+                <li class="divider"></li>
+     <!--     <li class="raslesssai"><a href="/serveur/channels/monessai/"><span>Switch to </span>   </a></li>-->
+                
+                
+                <!-- react-empty: 159 --><!-- react-empty: 160 -->
+                
+
+            </ul>
+        </li>
+    </ul>
+
+</div>
+</div>
+
+<div class="bloci2">
+<form id="fi_input">
+     <label for="fi_input_id">Priv</label><input type="text" name="msg" id="fi_input_id" />
+     <input  id="btni_send" type="submit"/>  
+</form>
+<button class="circleIconButton"id="menubutton" type="submit">+</button> 
+
+</div>
+
+
+
+<div class="bloci22">
+<form id="fi_input22">
+     <input type="text" name="msg" id="fi_input_id22" /><br>
+     <input  id="btni_send22" type="submit" value="Go!" style="cursor:pointer;">
+</form>
+<button class="circleIconButton22" id="menubutton22" type="submit">+</button>
+</div>
+
+<div class="bloc">
+				
+<select multiple size="" name="roomies" id="chatroomi">
+        
+</select>
+
+</div>
+<div class="blocaus">
+				
+<select multiple size="" name="ramies" id="chatrami">
+        
+</select>
+
+</div>
+
+
+
+
+
+
+</div>
+    <div id="users_list">
+        <h3>CONNECTED USERS</h3>
+        <ul id="ul_users_list"></ul>
+    </div>
+    <div id="channels_list">
+        <h3>CHANNELS</h3>
+        <ul id="ul_channels_list"></ul>
+    </div> 
+        
+    <form id="f_input" >
+        <input type="button" id="b1" value="" /> 
+        <span class="tb" >
+            
+            <input class="tb" id="tb_message" type="text" autocomplete="off"/>
+           
+        </span>
+        <input class="btn" id="btn_send" type="submit" value="SEND">
+    </form>
+   
+    <div id="div_responses"></div>
+
+
+
+<a href="#modal1" class="js-modal"> Ouvrir</a>
+
+<aside id="modal1"  class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
+    <div class="modal-wrapper js-modal-stop">
+        <button class="js-close-modal">X</button>
+        <h1 id="titlemodal">Conditions d'utilisations</h1>
+        <p>You're a killer. I catch killers. Watching ice melt. This is fun. I like seafood. God created pudding, and then he rested. I'm doing mental jumping jacks.</p>
+        <p>Like a sloth. I can do that. Only you could make those words cute. You all right, Dexter? I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely. With my own set of rules. I'm Dexter. Boo.</p>
+        <p>I am not a killer. Somehow, I doubt that. You have a good heart, Dexter. This man is a knight in shining armor. <strong> Under normal circumstances, I'd take that as a compliment.</strong> <em> Oh I beg to differ, I think we have a lot to discuss.</em> After all, you are a client.</p>
+        <ol>
+            <li>
+                cccccccccccccccccccccccccccccccccccc
+            </li>
+            <li>
+                    cccccccccccccccccccccccccccccccccccc
+            </li>
+        </ol>
+        <input type="text">
+        <h2 >Conditions d'utilisations</h2>
+        <p>Rorschach would say you have a hard time relating to others. This man is a knight in shining armor. I have a dark side, too. I'm really more an apartment person. He taught me a code. To survive. He taught me a code. To survive.</p>
+        <p>Like a sloth. I can do that. This man is a knight in shining armor. Rorschach would say you have a hard time relating to others. Rorschach would say you have a hard time relating to others.</p>
+        <ul>
+        
+            <li>Tonight's the night. And it's going to happen again and again. It has to happen.</li><li>I think he's got a crush on you, Dex!</li><li>I'm partial to air conditioning.</li>
+        
+        </ul>
+        <a href="#" >rrrrrrr</a>
+
+        <h3 >Conditions d'utilisations</h3>
+        <p>You're a killer. I catch killers. He taught me a code. To survive. I'm going to tell you something that I've never told anyone before. Tell him time is of the essence. Somehow, I doubt that. You have a good heart, Dexter.</p>
+
+        
+    </div>
+
+</aside>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js" integrity="sha256-6sZs7OGP0Uzcl7UDsLaNsy1K0KTZx1+6yEVrRJMn2IM=" crossorigin="anonymous"></script>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.5/showdown.min.js"></script>
+<script src="/assets/script.js"></script>
+  </body>
+</html>
